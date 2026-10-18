@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ayushman Tripathi — Associate Product Manager & Software Engineer at the intersection of AI Systems, SaaS, and Platform Execution." />
+  <title>Ayushman Tripathi — Product × AI × Engineering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Kalam:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-theme="dark">
+
+  <!-- ─────────── SCROLL PROGRESS BAR ─────────── -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- ─────────── INITIAL CONCENTRIC RIPPLE LOADER ─────────── -->
+  <div id="loader" class="loader-overlay" aria-hidden="true">
+    <div class="loader-ring-wrap">
+      <span class="loader-ring ring-0"></span>
+      <span class="loader-ring ring-1"></span>
+      <span class="loader-ring ring-2"></span>
+      <span class="loader-ring ring-3"></span>
+      <span class="loader-ring ring-4"></span>
+      <span class="loader-ring ring-5"></span>
+      <span class="loader-ring ring-6"></span>
+      <span class="loader-ring ring-7"></span>
+      <div class="loader-name">Ayushman Tripathi</div>
+    </div>
+  </div>
+
+  <!-- ─────────── 3D FIERY TUBE CURSOR (THREE.JS / CANVAS PORTAL) ─────────── -->
+  <div id="tube-cursor-portal">
+    <canvas id="tube-canvas"></canvas>
+  </div>
+
+  <!-- ─────────── CUSTOM GLOW CURSOR + DOT ─────────── -->
+  <div id="cc-cursor-glow"></div>
+  <div id="cc-cursor-dot"></div>
+
+  <!-- ─────────── TOP FLOATING STICKY NAV ─────────── -->
+  <header class="nav-wrap">
+    <nav class="nav" id="mainNav">
+      <div class="nav-brand">
+        <div class="logo-mark"></div>
+        <span class="brand-name">Ayushman Tripathi</span>
+        <span class="nav-tagline" data-nav-tagline>— ASSOCIATE PRODUCT MANAGER</span>
+      </div>
+
+      <div class="nav-links" data-nav-links>
+        <a href="#work" data-nav-link>Work</a>
+        <a href="#about" data-nav-link>About</a>
+        <a href="#method" data-nav-link>The Method</a>
+        <a href="#experience" data-nav-link>Experience</a>
+        <a href="#outside" data-nav-link>Outside</a>
+        <a href="#contact" data-nav-link>Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="mailto:ayushmantripathi1@gmail.com" class="resume-btn" data-resume-cta>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 17V3"></path>
+            <path d="m6 11 6 6 6-6"></path>
+            <path d="M19 21H5"></path>
+          </svg>
+          <span>Resume</span>
+        </a>
+
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+          <span id="themeIcon">☾</span>
+        </button>
+
+        <button id="hamburgerBtn" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown -->
+      <div id="mobileMenu" class="mobile-menu">
+        <a href="#work" class="mobile-link">Work</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#method" class="mobile-link">The Method</a>
+        <a href="#experience" class="mobile-link">Experience</a>
+        <a href="#outside" class="mobile-link">Outside</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        <div class="mobile-resume-wrap">
+          <a href="mailto:ayushmantripathi1@gmail.com" class="resume-btn full-width">
+            <span>Download Resume</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- ─────────── HERO (CENTERED EDITORIAL) ─────────── -->
+    <section class="hero-section">
+      <div class="hero-grid-bg"></div>
+      <div class="hero-vignette"></div>
+
+      <div class="hero-center-stack">
+        <!-- Live status pill -->
+        <div class="hero-eyebrow">
+          <span class="live-dot"></span>
+          <span>OPEN FOR APM ROLES · PUNE, IN</span>
+        </div>
+
+        <!-- Headline with serif italic emphasis -->
+        <h1 class="hero-headline">
+          Engineering the dialogues<br>
+          between <em class="serif-italic">AI Systems</em> <span class="amp">&amp;</span> <em class="serif-italic">Product Strategy</em>
+        </h1>
+
+        <!-- APM Portrait / Interactive Core with Orange Aura -->
+        <div class="portrait-wrap">
+          <div class="portrait-aura"></div>
+          <div class="portrait-bloom"></div>
+          <div class="apm-core-card">
+            <div class="core-inner">
+              <div class="core-chip">
+                <span class="core-dot"></span>
+                <span>SYSTEM STATUS: ACTIVE</span>
+              </div>
+              <div class="core-metric-badge">
+                <div class="core-num">0→1</div>
+                <div class="core-sub">PRODUCT DELIVERY</div>
+              </div>
+              <div class="core-tech-stack">
+                <span>AGENTIC RAG</span>
+                <span>·</span>
+                <span>PRDs</span>
+                <span>·</span>
+                <span>TELEMETRY</span>
+              </div>
+            </div>
+            <div class="core-hud-line"></div>
+          </div>
+        </div>
+
+        <!-- Sub-copy / Bio -->
+        <div class="sub-copy">
+          <div class="sub-copy-name">I'M AYUSHMAN TRIPATHI</div>
+          <div class="sub-copy-details">
+            <span>Associate Product Manager &amp; Software Engineer</span>
+            <span class="bullet">·</span>
+            <span>Volkswagen Group Digital Solutions</span>
+            <span class="bullet">·</span>
+            <span>Pune, India</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <a href="#work" class="scroll-indicator" aria-label="Scroll down to Selected Works">
+        <span class="scroll-label">Scroll down</span>
+        <div class="scroll-track">
+          <div class="scroll-dot"></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- ─────────── DUAL-ROW INFINITE PROOF MARQUEE ─────────── -->
+    <div class="marquee-section">
+      <!-- Row 1: Leftward moving disciplines -->
+      <div class="marquee-row" data-marquee-row data-direction="left">
+        <div class="marquee-track">
+          <div class="marquee-item"><span>0-TO-1 PRODUCT DISCOVERY</span><span class="m-dot">·</span></div>
+          <div class="marquee-item"><span class="accent-glow-text">AGENTIC RAG WORKFLOWS</span><span class="m-dot">·</span></div>
+          <div class="marquee-item"><span>PRD AUTHORING &amp; SPECS</span><span class="m-dot">·</span></div>
+          <div class="marquee-item"><span class="accent-glow-text">TELEMETRY &amp; LATENCY OPTIMIZATION</span><span class="m-dot">·</span></div>
+          <div class="marquee-item"><span>VOLKSWAGEN PLATFORM DEVEX</span><span class="m-dot">·</span></div>
+          <div class="marquee-item"><span class="accent-glow-text">HYPOTHESIS-DRIVEN EXPERIMENTATION</span><span class="m-dot">·</span></div>
+          <!-- Duplicate for seamless loop -->
+          <div class="marquee-item"><span>0-TO-1 PRODUCT DISCOVERY</span><span class="m-dot">·</span></div>
+          <div class="marquee-item"><span class="accent-glow-text">AGENTIC RAG WORKFLOWS</span><span class="m-dot">·</span></div>
+          <div class="marquee-item"><span>PRD AUTHORING &amp; SPECS</span><span class="m-dot">·</span></div>
+          <div class="marquee-item"><span class="accent-glow-text">TELEMETRY &amp; LATENCY OPTIMIZATION</span><span class="m-dot">·</span></div>
+          <div class="marquee-item"><span>VOLKSWAGEN PLATFORM DEVEX</span><span class="m-dot">·</span></div>
+          <div class="marquee-item"><span class="accent-glow-text">HYPOTHESIS-DRIVEN EXPERIMENTATION</span><span class="m-dot">·</span></div>
+        </div>
+      </div>
+
+      <!-- Row 2: Rightward moving quantified outcomes -->
+      <div class="marquee-row" data-marquee-row data-direction="right">
+        <div class="marquee-track">
+          <div class="marquee-item"><span class="gold-text">40% REAL-TIME LATENCY CUT</span><span class="m-dot">·</span></div>
+          <div class="marquee-item"><span>12-WEEK AGILE GTM DELIVERY</span><span class="m-dot">·</span></div>
+          <div class="marquee-item"><span class="gold-text">99.4% RETRIEVAL PRECISION</span><span class="m-dot">·</span></div>
+          <div class="marquee-item"><span>65% ONBOARDING ACCELERATION</span><span class="m-dot">·</span></div>
+          <div class="marquee-item"><span class="gold-text">75+ COMMUNITY BUILDERS</span><span class="m-dot">·</span></div>
+          <div class="marquee-item"><span>SOLANA HACKER HOUSE DEMO</span><span class="m-dot">·</span></div>
+          <!-- Duplicate for seamless loop -->
+          <div class="marquee-item"><span class="gold-text">40% REAL-TIME LATENCY CUT</span><span class="m-dot">·</span></div>
+          <div class="marquee-item"><span>12-WEEK AGILE GTM DELIVERY</span><span class="m-dot">·</span></div>
+          <div class="marquee-item"><span class="gold-text">99.4% RETRIEVAL PRECISION</span><span class="m-dot">·</span></div>
+          <div class="marquee-item"><span>65% ONBOARDING ACCELERATION</span><span class="m-dot">·</span></div>
+          <div class="marquee-item"><span class="gold-text">75+ COMMUNITY BUILDERS</span><span class="m-dot">·</span></div>
+          <div class="marquee-item"><span>SOLANA HACKER HOUSE DEMO</span><span class="m-dot">·</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─────────── 01 · SELECTED WORKS ─────────── -->
+    <section id="work" class="site-section">
+      <div class="section-header">
+        <div>
+          <div class="section-tag">◦ 01 ◦ SELECTED WORKS</div>
+          <h2 class="section-title">Products in <em class="serif-italic">action.</em></h2>
+        </div>
+        <p class="section-lead">
+          Bridging technical engineering depth with end-to-end product discovery, PRD authoring, and quantifiable business outcomes.
+        </p>
+      </div>
+
+      <div class="cases-wrap">
+        <!-- Case 01: MetaMind AI -->
+        <article class="case-card" data-case-card="0" id="metamind">
+          <div class="case-glow"></div>
+          <div class="case-grid-lines"></div>
+          <div class="case-spotlight"></div>
+          <div class="case-serial">01</div>
+          <div class="case-year">2026</div>
+
+          <div class="case-inner-grid">
+            <!-- Left: Interactive Preview Graphic -->
+            <div class="case-preview-wrap warm">
+              <div class="preview-hud">
+                <div class="hud-top">
+                  <span class="hud-dot green"></span>
+                  <span class="hud-label">AGENTIC_RAG_PIPELINE // V2.4</span>
+                </div>
+                <div class="hud-diagram">
+                  <div class="hud-node">
+                    <span class="node-title">Enterprise Query</span>
+                    <span class="node-meta">Unstructured Slack/Jira</span>
+                  </div>
+                  <div class="hud-connector">↳ Agentic Routing</div>
+                  <div class="hud-node active">
+                    <span class="node-title">Hybrid Vector + Keyword</span>
+                    <span class="node-meta">Sub-50ms Reranking</span>
+                  </div>
+                  <div class="hud-connector">↳ Verification Guardrail</div>
+                  <div class="hud-node success">
+                    <span class="node-title">Validated KT Synthesis</span>
+                    <span class="node-meta">0 Hallucination Citations</span>
+                  </div>
+                </div>
+                <div class="hud-stat-pill">
+                  <span>99.4% Retrieval Precision</span>
+                  <span>·</span>
+                  <span>0-to-1 MVP Spec</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Details -->
+            <div class="case-details">
+              <h3 class="case-title">Autonomous Enterprise Knowledge Discovery via Agentic RAG Workflows</h3>
+              <div class="case-tag-row">
+                <span class="case-tag">0 → 1 MVP Scope</span>
+                <span class="case-tag">Agentic AI</span>
+                <span class="case-tag">Enterprise RAG</span>
+                <span class="case-tag">PRD Authoring</span>
+              </div>
+              <p class="case-desc">
+                Led product research, problem discovery, and stakeholder pain-point prioritization; translated complex internal information bottlenecks into high-precision agentic retrieval workflows and defined full 0-to-1 MVP feature specifications.
+              </p>
+              <div class="case-cta-wrap">
+                <button class="case-cta" data-open-modal="metamind">
+                  <span>Inspect PRD &amp; Case Study</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                  <span class="cta-edge"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case 02: Smart Mobility Platform -->
+        <article class="case-card" data-case-card="1" id="platforms">
+          <div class="case-glow"></div>
+          <div class="case-grid-lines"></div>
+          <div class="case-spotlight"></div>
+          <div class="case-serial">02</div>
+          <div class="case-year">2025</div>
+
+          <div class="case-inner-grid">
+            <!-- Left: Interactive Preview Graphic -->
+            <div class="case-preview-wrap mid">
+              <div class="preview-hud">
+                <div class="hud-top">
+                  <span class="hud-dot orange"></span>
+                  <span class="hud-label">TELEMETRY_ENGINE // 12-WK LAUNCH</span>
+                </div>
+                <div class="telemetry-display">
+                  <div class="telemetry-bar-wrap">
+                    <div class="telemetry-metric-big">40%</div>
+                    <div class="telemetry-sub">Real-Time Latency Reduction</div>
+                  </div>
+                  <div class="telemetry-stream">
+                    <div class="stream-line"><span class="stream-time">00:01.04</span> <span class="stream-event">MQTT Telemetry Packet</span> <span class="stream-ok">OK</span></div>
+                    <div class="stream-line"><span class="stream-time">00:01.28</span> <span class="stream-event">Hardware Geofence Sync</span> <span class="stream-ok">OK</span></div>
+                    <div class="stream-line"><span class="stream-time">00:01.89</span> <span class="stream-event">Payment Pipeline Auth</span> <span class="stream-ok">PASS</span></div>
+                  </div>
+                </div>
+                <div class="hud-stat-pill">
+                  <span>12 Weeks to Market</span>
+                  <span>·</span>
+                  <span>Cross-Functional Fleet App</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Details -->
+            <div class="case-details">
+              <h3 class="case-title">0-to-1 Smart Mobility Platform Delivered in 12 Weeks</h3>
+              <div class="case-tag-row">
+                <span class="case-tag">Product Intern</span>
+                <span class="case-tag">B2B Mobility</span>
+                <span class="case-tag">Hardware Telemetry</span>
+                <span class="case-tag">Agile Delivery</span>
+              </div>
+              <p class="case-desc">
+                Authored end-to-end PRDs and aligned cross-functional teams across rider mobile apps, operator admin dashboards, and backend microservices. Integrated real-time hardware telemetry and payment pipelines on a strict 12-week go-to-market cadence.
+              </p>
+              <div class="case-cta-wrap">
+                <button class="case-cta" data-open-modal="mobility">
+                  <span>Inspect PRD &amp; Case Study</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                  <span class="cta-edge"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case 03: DevEx & Platform Automation -->
+        <article class="case-card" data-case-card="2" id="outcomes">
+          <div class="case-glow"></div>
+          <div class="case-grid-lines"></div>
+          <div class="case-spotlight"></div>
+          <div class="case-serial">03</div>
+          <div class="case-year">2025</div>
+
+          <div class="case-inner-grid">
+            <!-- Left: Interactive Preview Graphic -->
+            <div class="case-preview-wrap cool">
+              <div class="preview-hud">
+                <div class="hud-top">
+                  <span class="hud-dot blue"></span>
+                  <span class="hud-label">ENTERPRISE_DEVEX // AUTOMATION</span>
+                </div>
+                <div class="ramp-comparison">
+                  <div class="ramp-row">
+                    <span class="ramp-label">Legacy Onboarding</span>
+                    <div class="ramp-track"><div class="ramp-fill legacy" style="width: 100%;"></div></div>
+                    <span class="ramp-val">4 Weeks</span>
+                  </div>
+                  <div class="ramp-row active">
+                    <span class="ramp-label">AI-Assisted Ramping</span>
+                    <div class="ramp-track"><div class="ramp-fill modern" style="width: 32%;"></div></div>
+                    <span class="ramp-val accent">1–2 Weeks</span>
+                  </div>
+                </div>
+                <div class="hud-stat-pill">
+                  <span>65% Ramp Time Cut</span>
+                  <span>·</span>
+                  <span>Pre-flight CI/CD Validation</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Details -->
+            <div class="case-details">
+              <h3 class="case-title">Automating Technical Onboarding &amp; Pre-flight Deployments</h3>
+              <div class="case-tag-row">
+                <span class="case-tag">Volkswagen Group</span>
+                <span class="case-tag">DevEx Strategy</span>
+                <span class="case-tag">Platform Engineering</span>
+                <span class="case-tag">Cloud Native</span>
+              </div>
+              <p class="case-desc">
+                Developed conversational KT assistants to streamline developer ramping and automated pre-flight deployment verifications across access, readiness, and build troubleshooting in an enterprise automotive cloud environment.
+              </p>
+              <div class="case-cta-wrap">
+                <button class="case-cta" data-open-modal="devex">
+                  <span>Inspect PRD &amp; Case Study</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                  <span class="cta-edge"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ─────────── 02 · ABOUT ME ─────────── -->
+    <section id="about" class="site-section" data-about-section>
+      <div class="section-header">
+        <div>
+          <div class="section-tag">◦ 02 ◦ ABOUT</div>
+          <h2 class="section-title">Hey, nice to <em class="serif-italic">meet you.</em></h2>
+        </div>
+        <p class="section-lead">
+          A quick window into how I think, solve, and connect engineering systems to real user value.
+        </p>
+      </div>
+
+      <div class="about-layout" data-about-layout>
+        <!-- LEFT: Glass card with live status -->
+        <div class="about-photo-col" data-about-anim data-stagger="0">
+          <div class="about-frame" data-case-card="about-frame">
+            <div class="about-inner-stage">
+              <div class="about-avatar-symbol">
+                <span class="avatar-monogram">AT</span>
+                <div class="avatar-ring"></div>
+              </div>
+              <div class="about-hud-overlay">
+                <div class="hud-pill"><span class="dot-online"></span> ACTIVE IN PRODUCT</div>
+                <div class="hud-quote">“The best product specs read like engineering clarity, not bureaucratic wishes.”</div>
+              </div>
+            </div>
+            <div class="about-caption">
+              <span class="caption-time" id="seenAtText">Seen at Pune · IN</span>
+              <span class="caption-loc">APM / SWE</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Narrative & Signature -->
+        <div class="about-content-col">
+          <p class="about-para" data-about-anim data-stagger="1">
+            I’m an engineer by training, a builder at heart, and an aspiring Product Manager obsessed with the mechanics of how complex technology turns into intuitive software.
+          </p>
+
+          <p class="about-para" data-about-anim data-stagger="2">
+            Currently at <strong>Volkswagen Group Digital Solutions India</strong>, I work at the junction of AI-enabled developer platforms, deployment validation, and cloud-native services. Before this, at <strong>Yantrovaa</strong>, I drove 0-to-1 platform discovery and delivery for a B2B smart mobility suite spanning IoT telemetry, driver mobile apps, and payment gateways in 12 weeks.
+          </p>
+
+          <p class="about-para" data-about-anim data-stagger="3">
+            What makes me unique as an APM is that I don’t treat engineering as a black box. I can read the pull request, understand vector database trade-offs, and run SQL queries—while staying ruthlessly focused on customer discovery, PRD clarity, and North Star metrics.
+          </p>
+
+          <!-- Signature with stroke reveal -->
+          <div class="about-signature-wrap" data-about-anim data-stagger="4">
+            <div class="signature-clip" id="sigClip">
+              <div class="signature-text" aria-label="Ayushman Tripathi signature">Ayushman Tripathi</div>
+            </div>
+          </div>
+
+          <div class="about-cta-wrap" data-about-anim data-stagger="5">
+            <a href="#contact" class="about-cta">
+              <span>Let’s build together</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+              <span class="cta-edge"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────── 03 · THE METHOD (APM FRAMEWORKS) ─────────── -->
+    <section id="method" class="site-section">
+      <div class="section-header">
+        <div>
+          <div class="section-tag">◦ 03 ◦ THE METHOD</div>
+          <h2 class="section-title">The Primer for <em class="serif-italic">0-to-1 Product Delivery.</em></h2>
+        </div>
+        <p class="section-lead">
+          Core operating principles I rely on to turn ambiguous customer problems into high-velocity execution.
+        </p>
+      </div>
+
+      <div class="method-grid">
+        <article class="method-card" data-method-card="0">
+          <div class="method-tag">01 / DISCOVERY &amp; PRDS</div>
+          <h3 class="method-title">Customer Friction into Crisp Specifications</h3>
+          <p class="method-body">
+            Starting with user interviews, telemetry funnels, and stakeholder pain points. Authoring living PRDs with clear user stories, edge cases, acceptance criteria, and non-goals.
+          </p>
+        </article>
+
+        <article class="method-card" data-method-card="1">
+          <div class="method-tag">02 / AI &amp; SYSTEMS ARCHITECTURE</div>
+          <h3 class="method-title">Pragmatic AI &amp; Agentic RAG Workflows</h3>
+          <p class="method-body">
+            Separating GenAI hype from deterministic product utility. Establishing retrieval benchmarks, token cost guards, latency budgets, and rigorous evaluation pipelines.
+          </p>
+        </article>
+
+        <article class="method-card" data-method-card="2">
+          <div class="method-tag">03 / METRICS &amp; TELEMETRY</div>
+          <h3 class="method-title">North Stars, Guardrails &amp; Cohort Health</h3>
+          <p class="method-body">
+            Instrumenting products for truth from Day 1. Pairing North Star engagement metrics with guardrail latency and error rates to prevent phantom growth.
+          </p>
+        </article>
+
+        <article class="method-card" data-method-card="3">
+          <div class="method-tag">04 / CADENCE &amp; ALIGNMENT</div>
+          <h3 class="method-title">Engineering Empathy &amp; Agile Velocity</h3>
+          <p class="method-body">
+            Speaking the language of engineers and designers. Running tight 2-week sprint cycles, unblocking PRs, and maintaining morale through transparent roadmaps.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ─────────── 04 · EXPERIENCE TIMELINE ─────────── -->
+    <section id="experience" class="site-section">
+      <div class="section-header">
+        <div>
+          <div class="section-tag">◦ 04 ◦ EXPERIENCE</div>
+          <h2 class="section-title">Where I’ve <em class="serif-italic">delivered.</em></h2>
+        </div>
+        <p class="section-lead">
+          A track record of continuous delivery across enterprise platforms, early-stage startups, and developer ecosystems.
+        </p>
+      </div>
+
+      <div class="timeline-wrap">
+        <div class="timeline-line"></div>
+
+        <!-- Row 1: VW -->
+        <div class="timeline-row" data-exp-reveal>
+          <div class="timeline-date">NOV 2025 — PRESENT</div>
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Software Engineer</h3>
+                <div class="timeline-company">Volkswagen Group Digital Solutions India</div>
+              </div>
+              <span class="timeline-badge current">Current</span>
+            </div>
+            <p class="timeline-body">
+              Architecting AI-assisted developer enablement tools, deployment automation pipelines, and cloud-native capabilities. Partnering with cross-regional product owners to accelerate release velocity in an automotive enterprise cloud ecosystem.
+            </p>
+          </div>
+        </div>
+
+        <!-- Row 2: Yantrovaa -->
+        <div class="timeline-row" data-exp-reveal>
+          <div class="timeline-date">JUN 2025 — OCT 2025</div>
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Product Development Intern</h3>
+                <div class="timeline-company">Yantrovaa</div>
+              </div>
+              <span class="timeline-badge">0-to-1 Launch</span>
+            </div>
+            <p class="timeline-body">
+              Drove product discovery, MVP roadmapping, and cross-functional alignment for a B2B smart mobility platform. Coordinated mobile apps, fleet management dashboards, hardware IoT telemetry, and payments—launching in 12 weeks with a 40% latency cut.
+            </p>
+          </div>
+        </div>
+
+        <!-- Row 3: Archway -->
+        <div class="timeline-row" data-exp-reveal>
+          <div class="timeline-date">2023 — 2024</div>
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Community Founder</h3>
+                <div class="timeline-company">Archway Bhubaneswar</div>
+              </div>
+              <span class="timeline-badge">Ecosystem</span>
+            </div>
+            <p class="timeline-body">
+              Founded and grew the city's first developer community to 75+ active builders in three months through hands-on technical workshops, hack nights, and peer code reviews.
+            </p>
+          </div>
+        </div>
+
+        <!-- Row 4: Fuezen -->
+        <div class="timeline-row" data-exp-reveal>
+          <div class="timeline-date">2023</div>
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Founding Engineer</h3>
+                <div class="timeline-company">Fuezen</div>
+              </div>
+              <span class="timeline-badge">Hacker House</span>
+            </div>
+            <p class="timeline-body">
+              Engineered and stabilized an early Solana dApp platform for live presentation at Solana Hacker House 2023, driving 100+ organic user onboardings during the demo showcase.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────── 05 · OUTSIDE THE WORKSPACE (BENTO) ─────────── -->
+    <section id="outside" class="site-section">
+      <div class="section-header">
+        <div>
+          <div class="section-tag">◦ 05 ◦ OUTSIDE THE WORKSPACE</div>
+          <h2 class="section-title">Curiosity beyond the <em class="serif-italic">backlog.</em></h2>
+        </div>
+        <p class="section-lead">
+          Product observations, teardowns, and engineering insights exploring how technology shifts user behavior.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <a href="#contact" class="bento-card" data-bento-card="0">
+          <div class="bento-tag">TEARDOWN · AGENTIC AI</div>
+          <h3 class="bento-title">What makes an enterprise AI assistant actually useful?</h3>
+          <p class="bento-body">
+            Why 90% of chat-with-your-docs tools fail in production: the gap between semantic retrieval accuracy and workflow state management.
+          </p>
+          <span class="bento-arrow">↗</span>
+        </a>
+
+        <a href="#contact" class="bento-card" data-bento-card="1">
+          <div class="bento-tag">PRODUCT · DEVEX</div>
+          <h3 class="bento-title">Turning developer onboarding into a product, not a wiki page</h3>
+          <p class="bento-body">
+            Treating internal engineers as external customers: measuring time-to-first-commit and automating environment verification.
+          </p>
+          <span class="bento-arrow">↗</span>
+        </a>
+
+        <a href="#contact" class="bento-card" data-bento-card="2">
+          <div class="bento-tag">SYSTEMS · RAG</div>
+          <h3 class="bento-title">From simple retrieval to multi-step agent actions</h3>
+          <p class="bento-body">
+            Where agentic retrieval workflows deliver asymmetric value over naive RAG—and where simple deterministic code remains superior.
+          </p>
+          <span class="bento-arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ─────────── 06 · CONNECT & FOOTER ─────────── -->
+    <section id="contact" class="contact-section">
+      <div class="contact-line"></div>
+
+      <div class="contact-inner">
+        <div class="section-tag">◦ 06 ◦ LET’S CONNECT</div>
+        <h2 class="contact-heading">Let’s build products that <em class="serif-italic">matter.</em></h2>
+        <p class="contact-lead">
+          Open to conversations around Associate Product Manager (APM) opportunities, AI products, developer platforms, and 0-to-1 platform execution.
+        </p>
+
+        <!-- Big interactive email copy CTA -->
+        <div class="contact-cta-wrap">
+          <button id="copyEmailBtn" class="contact-main-cta" data-email="ayushmantripathi1@gmail.com">
+            <span class="cta-inner-text">ayushmantripathi1@gmail.com</span>
+            <span class="copy-badge" id="copyBadge">Click to Copy ❐</span>
+            <span class="cta-edge"></span>
+          </button>
+        </div>
+
+        <div class="contact-links-grid">
+          <a href="mailto:ayushmantripathi1@gmail.com" class="contact-link-pill">Email ↗</a>
+          <a href="tel:+916392640896" class="contact-link-pill">+91 6392640896 ↗</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" class="contact-link-pill">LinkedIn ↗</a>
+          <a href="https://github.com/ayushman-7" target="_blank" rel="noreferrer" class="contact-link-pill">GitHub / ayushman-7 ↗</a>
+        </div>
+
+        <footer class="footer-meta">
+          <span>© 2026 Ayushman Tripathi · Based in Pune, India</span>
+          <span>Crafted with Product Empathy &amp; Engineering Depth</span>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <!-- ─────────── INTERACTIVE APM PRD MODAL ─────────── -->
+  <div id="prdModal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-window">
+      <button id="modalCloseBtn" class="modal-close" aria-label="Close case study modal">✕</button>
+      <div id="modalContent" class="modal-body">
+        <!-- Injected dynamically via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
