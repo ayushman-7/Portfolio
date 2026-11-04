@@ -407,11 +407,16 @@ document.addEventListener('DOMContentLoaded', () => {
       if (sig) {
         const sigElapsed = Math.max(0, elapsed - SIG_DELAY);
         const sp = Math.min(1, sigElapsed / SIG_DURATION);
-        const se = easeOutCubic(sp);
-        const inset = (100 * (1 - se)).toFixed(2);
-        const val = `inset(0 ${inset}% 0 0)`;
-        sig.style.clipPath = val;
-        sig.style.webkitClipPath = val;
+        if (sp >= 1) {
+          sig.style.clipPath = 'none';
+          sig.style.webkitClipPath = 'none';
+        } else {
+          const se = easeOutCubic(sp);
+          const inset = (100 * (1 - se)).toFixed(2);
+          const val = `inset(0 ${inset}% 0 0)`;
+          sig.style.clipPath = val;
+          sig.style.webkitClipPath = val;
+        }
       }
     }
     requestAnimationFrame(aboutTick);
